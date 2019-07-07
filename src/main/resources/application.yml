@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    username: guest
+    password: guest
+    host: 192.168.40.129
+  cloud:
+    stream:
+      bindings:
+        input:
+          group: groupA
+        example-topic:
+          consumer:
+            max-attempts: 4
+          group: stream-exception-handler
